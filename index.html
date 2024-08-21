@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta charset="UTF-8">
+		<title>I've lost you, yet my heart still searches for you</title>
+		<link rel="stylesheet" type="text/css" href="./css/format.css">
+	</head>
+
+	<body style="margin:0px">
+		<audio autoplay loop muted id="audioPlayer">
+			<source src="music/music.mp3" type="audio/mpeg">
+			Your browser does not support the audio.
+		</audio>		
+		<canvas></canvas>
+		<div id="imgTxt">
+			<span id="Txt"></span> <br />
+			<span id="tmp"></span>
+			<img id="img" src="">
+		</div>
+		<div id="heartTxt">
+			<span id="clickMe">Click this one time!</span>
+			<div id="heart">
+				<button id="button" onclick="play()"></button>
+			</div>
+		</div>
+		<div id="content">
+			<h4 id="together">I've lost you, yet my heart still searches for you</h4>
+			<div id="timer">
+				<b id="d"></b> Days 
+				<b id="h"></b> Hours
+				<b id="m"></b> Minutes
+				<b id="s"></b> Seconds
+			</div>
+			
+		</div> 
+
+    	<div id = "typeDiv">
+        	<span id="txt1"></span> <br />
+        	<span id="txt2"></span>
+    	</div>		
+
+		<script >
+			var ok = 0;
+			var flag = 1;
+			var myImage = document.getElementById("img");
+			var myTxt = document.getElementById("Txt");
+			var imageArray = [
+				"pic/pic1.gif", 
+				"pic/pic2.jpg", 
+				"pic/3d410a1068028077185994cfcf4298a0.jpg", 
+				"pic/06cdfff2cb62b5dca2029f7ad16aaf66.jpg", 
+				"pic/one.jpg", 
+				"pic/71e4b668fb19f3d703f16bafdd3d73a3.jpg", 
+				"pic/524f09d1be4c786ea7865946cade5827.jpg", 
+				"pic/974e7ba57ed826c8b3ec634159964643.jpg", 
+				"pic/7808aa48dd8df36dfebee1f2894fa050.jpg", 
+				"pic/b14dce743f159079f7f03e0bec1e2de6.jpg", 
+				"pic/ca95155ff2a7f358cfc49c57eb6d1287.jpg", 
+				"pic/cfffbd8bdd4a1c3a0bb45965b1485354.jpg", 
+				"pic/e96b6c4eb5174e4176fa832c2bd53efe.jpg",
+				"pic/e610de8df12ff4635535450a815f3da1.jpg", 
+				"pic/f29c3acdf7eceb31975a6c6eaab10807.jpg", 
+				"pic/f34d824386ca486150e184db50b6580e.jpg",
+				"pic/Screenshot_20240821_132914_Messenger.png"
+			];
+			var imageIndex = 0;
+			var txtArray = [
+				"Hello there, cutiee~", 
+				"Upon our first encounter, \nI never anticipated the profound affection I would develop for her. \nIndeed, who could resist her ethereal beauty, \nintelligence, and strong family values? \nHer captivating personality is simply irresistible.", 
+				"Yeyyy, I was with her at the DSPC, and I remember that moment when our feet touched. It was so comforting. It means so much to me that she didn't mind when I constantly rubbed or touched her feet with mine. I fell for her even more; I could have died in that moment.(｡･ω･｡)ﾉ♡",
+				"I don't know why I constantly think about her. She always catches my attention, but I try not to show it.",
+				"I constantly see her in my peripheral vision.  Naramdaman mo ba yung feeling na siya lang nakikita mo kahit andaming tao ang nakapaligid sa kanya?", 
+				"I finally mustered the courage to reach out and ask her if I could court her.  I'm feeling both nervous and happy, and I'm thrilled that she agreed.o(≧v≦)o", 
+				"We went to their house with my friends just to ask Tito and Tita if I could court their daughter. I was very nervous at that time. Nagmano ako kay Tito and then asked, 'Tito, puwede ko po bang ligawan si ------?' I vividly remember what Tito said: 'Kung gusto niyang magpaligaw, edi mayat. Haan ko met iggim diyay desisyon ti anak ko.' His eyes showed how much he really cares about his daughter, and I promised myself at that moment that I would make her happy, never hurt her, and give her the love she deserves.(/ω＼)",
+				"I continued to court her through chats since it was the pandemic, and we were far apart. Sometimes, there were misunderstandings, but we always managed to work things out. I learned a lot from her as she kept educating me on what I shouldn't do. That's one of the reasons why I fell even harder for her.", 
+				"I'm incredibly proud of this amazing girl. She deserves so much more than the world can offer. She's an absolute angel—strong and resilient, facing her challenges head-on without ever giving up, no matter how tough things get.", 
+				"Her strength inspires me to tackle my own problems. She may not realize it, but she's helped me more than I can express, and I don't know how I'll ever repay her. Just in case she hasn't heard this recently, I'm telling her now: I'm so proud of you.", 
+				"Things didn't go as planned. We were both very busy with school and had a lot to accomplish. Our schedules conflicted, and at that time, we both decided to stop and focus on our own goals. We were both not ready to commit to a relationship because things weren't working out. I know it's hard for both of us, but we need to, even though it's difficult.", 
+				"The sunset is beautiful, isn't it?", 
+				"See you in the aisle.", 
+				"Watching her like Mona Lisa.", 
+				"Even as time marches on, measured by countless sunsets, my love remains steadfast, like the unwavering promise of dawn.",
+				"Sana kung pwede na, pwede pa...",
+				"..."
+			];
+			 var len = imageArray.length;
+			var t = 0;
+		</script>
+
+		<script>
+				document.body.addEventListener('click', function() {
+				var audio = document.getElementById("audioPlayer");
+				audio.muted = false;
+			});
+		</script>
+		
+		<script type="text/javascript" src="./js/stars.js"></script>
+		<script type="text/javascript" src="./js/typeWriter.js"></script>
+		<script type="text/javascript" src="./js/date.js"></script>
+		<script type="text/javascript" src="./js/playImg.js"></script>
+	</body>
+
+</html>
